@@ -1,23 +1,17 @@
-<ion-modal-view>
-  <ion-header-bar>
-    <h1 class="title">Login</h1>
-    <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
-    </div>
-  </ion-header-bar>
+<ion-view>
   <ion-content>
-    <form ng-submit="validLogin()">
+    <form ng-submit="login()">
       <div class="list">
-        <label class="item item-input {{pseudoInputColor}}">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
+        <label class="item item-input {{emailInputColor}}">
+          <span class="input-label">Email</span>
+          <input type="email" ng-model="loginData.email">
         </label>
         <label class="item item-input {{passInputColor}}">
-          <span class="input-label">Password</span>
+          <span class="input-label">Mot de passe</span>
           <input type="password" ng-model="loginData.password">
         </label>
-        <div ng-if=empty class="text-center">
-          Un pseudo et un mot de passe doivent être entrés
+        <div class="text-center">
+          {{problem}}
         </div>
         <label class="item">
           <button class="button button-block button-positive" type="submit">Log in</button>
@@ -25,4 +19,4 @@
       </div>
     </form>
   </ion-content>
-</ion-modal-view>
+</ion-view>

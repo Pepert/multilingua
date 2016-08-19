@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('multilingua', ['ionic', 'multilingua.controllers'])
+angular.module('multilingua', ['ionic', 'firebase', 'multilingua.controllers', 'multilingua.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -25,6 +25,25 @@ angular.module('multilingua', ['ionic', 'multilingua.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
+    .state('loading', {
+      url: '/loading',
+      templateUrl: 'templates/loading.html',
+      controller: 'LoadingCtrl'
+    })
+
+    .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'LoginCtrl'
+    })
+
+    .state('language', {
+      cache: false,
+      url: '/language',
+      templateUrl: 'templates/language.html',
+      controller: 'LanguageCtrl'
+    })
+
     .state('app', {
       url: '/app',
       abstract: true,
@@ -32,31 +51,13 @@ angular.module('multilingua', ['ionic', 'multilingua.controllers'])
       controller: 'AppCtrl'
     })
 
-    .state('app.login', {
-      url: '/login',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/login.html',
-          controller: 'LoginCtrl'
-        }
-      }
-    })
-
     .state('app.home', {
+      cache: false,
       url: '/home',
       views: {
         'menuContent': {
           templateUrl: 'templates/home.html',
           controller: 'HomeCtrl'
-        }
-      }
-    })
-
-    .state('app.cours', {
-      url: '/cours',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/cours.html'
         }
       }
     })
@@ -69,6 +70,17 @@ angular.module('multilingua', ['ionic', 'multilingua.controllers'])
         }
       }
     })
+
+    .state('app.listclass', {
+      url: '/listclass',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/cours/listclass.html',
+          controller: 'ListClassCtrl'
+        }
+      }
+    })
+
 
     .state('app.exercice', {
         url: '/exercice',
@@ -108,5 +120,5 @@ angular.module('multilingua', ['ionic', 'multilingua.controllers'])
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/login');
+  $urlRouterProvider.otherwise('/loading');
 });

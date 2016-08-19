@@ -1,4 +1,4 @@
-<ion-view view-title="Acceuil">
+<ion-view view-title="Cours">
   <ion-nav-bar class="bar-positive">
     <ion-nav-back-button></ion-nav-back-button>
     <ion-nav-buttons side="left">
@@ -6,6 +6,10 @@
     </ion-nav-buttons>
   </ion-nav-bar>
   <ion-content>
+    <div class="text-center">
+      Salut, {{username}} !
+    </div>
+
     <div>
       <p class="text-center">Le cours d'aujourd'hui est disponible !</p>
       <button class="button button-block button-positive" ng-click="dailyClass()">Allez au cours du jour</button>
@@ -13,7 +17,15 @@
 
     <div>
       <p class="text-center">Révisez les cours déjà étudiés</p>
-      <button class="button button-block button-positive">Voir les cours effectués</button>
+      <button class="button button-block button-positive" ng-click="listClass()">Voir les cours effectués</button>
+    </div>
+
+    <div>
+      <button class="button button-block button-positive" ng-click="setNewLanguage()">Choisir un autre langage</button>
+    </div>
+
+    <div>
+      <button class="button button-block button-positive" ng-click="disconnect()">Deconnexion</button>
     </div>
   </ion-content>
 </ion-view>
