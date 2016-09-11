@@ -1,0 +1,379 @@
+<div ng-if="answered" class="score-text text-center">
+  Votre score sur cet exercice est de
+</div>
+<div ng-if="answered" class="score text-center">
+  {{score}}/10
+</div>
+
+<hr/>
+<br/>
+
+<form ng-submit="validAnswer()">
+  <div>
+    <div class="list">
+      <div class=" item item-divider">
+        Question 1
+      </div>
+
+      <div class="question">Combien de lettres sont contenues dans l'alphabet espagnol ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question1" name="question1" ng-value="1" ng-disabled="disability">
+          <div id="question1answer1">29</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question1" name="question1" ng-value="2" ng-disabled="disability">
+          <div id="question1answer2">26</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question1" name="question1" ng-value="3" ng-disabled="disability">
+          <div id="question1answer3">27</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      L'alphabet espagnol contient 29 caractères
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 2
+      </div>
+
+      <div class="question">Combien de consonnes sont contenues dans l'alphabet espagnol ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question2" name="question2" ng-value="1" ng-disabled="disability">
+          <div id="question2answer1">24</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question2" name="question2" ng-value="2" ng-disabled="disability">
+          <div id="question2answer2">23</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question2" name="question2" ng-value="3" ng-disabled="disability">
+          <div id="question2answer3">25</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      L'alphabet espagnol contient 23 consonnes
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 3
+      </div>
+
+      <div class="question">Combien de voyelles sont contenues dans l'alphabet espagnol ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question3" name="question3" ng-value="1" ng-disabled="disability">
+          <div id="question3answer1">7</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question3" name="question3" ng-value="2" ng-disabled="disability">
+          <div id="question3answer2">5</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question3" name="question3" ng-value="3" ng-disabled="disability">
+          <div id="question3answer3">6</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      L'alphabet espagnol contient 6 voyelles
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 4
+      </div>
+
+      <div class="question">Combien de lettres sont propres à l'alphabet espagnol ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question4" name="question4" ng-value="1" ng-disabled="disability">
+          <div id="question4answer1">3</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question4" name="question4" ng-value="2" ng-disabled="disability">
+          <div id="question4answer2">2</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question4" name="question4" ng-value="3" ng-disabled="disability">
+          <div id="question4answer3">0</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      L'alphabet espagnol contient 3 lettres qui lui sont propres : "ch" [tche], "ll" [elle], "ñ" [eñe]
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 5
+      </div>
+
+      <div class="question">Laquelle de ces affirmation est correcte ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question5" name="question5" ng-value="1" ng-disabled="disability">
+          <div id="question5answer1">La prononciation espagnole est toujours
+          <br/>
+            identique à la prononciation française</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question5" name="question5" ng-value="2" ng-disabled="disability">
+          <div id="question5answer2">La prononciation espagnole est parfois
+            <br/>
+            identique à la prononciation française</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question5" name="question5" ng-value="3" ng-disabled="disability">
+          <div id="question5answer3">La prononciation espagnole est toujours
+            <br/>
+            différente de la prononciation française</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      La prononciation espagnole est parfois identique à la prononciation française, mais certaines prononciation sont propres à l'espagnol
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 6
+      </div>
+
+      <div class="question">Comment se prononce la lettre "u" en espagnol
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question6" name="question6" ng-value="1" ng-disabled="disability">
+          <div id="question6answer1">Comme le "o" français</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question6" name="question6" ng-value="2" ng-disabled="disability">
+          <div id="question6answer2">Comme le "u" français</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question6" name="question6" ng-value="3" ng-disabled="disability">
+          <div id="question6answer3">Comme le "ou" français</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      En espagnol, la lettre "u" se prononce "ou"
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 7
+      </div>
+
+      <div class="question">Comment prononce-t-on le son C+A en espagnol ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question7" name="question7" ng-value="1" ng-disabled="disability">
+          <div id="question7answer1">"ka"</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question7" name="question7" ng-value="2" ng-disabled="disability">
+          <div id="question7answer2">"ssa"</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question7" name="question7" ng-value="3" ng-disabled="disability">
+          <div id="question7answer3">"za"</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      En espagnol, C+A se prononce "ka"
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 8
+      </div>
+
+      <div class="question">Comment prononce-t-on le son G+E en espagnol ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question8" name="question8" ng-value="1" ng-disabled="disability">
+          <div id="question8answer1">"gué"</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question8" name="question8" ng-value="2" ng-disabled="disability">
+          <div id="question8answer2">"ré"</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question8" name="question8" ng-value="3" ng-disabled="disability">
+          <div id="question8answer3">"jé"</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      En espagnol, G+E se prononce "ré"
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 9
+      </div>
+
+      <div class="question">Comment se prononce la lettre "Ñ" en espagnol ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question9" name="question9" ng-value="1" ng-disabled="disability">
+          <div id="question9answer1">gné</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question9" name="question9" ng-value="2" ng-disabled="disability">
+          <div id="question9answer2">enne</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question9" name="question9" ng-value="3" ng-disabled="disability">
+          <div id="question9answer3">égné</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      En espagnol, "Ñ" se prononce "égné"
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 10
+      </div>
+
+      <div class="question">Laquelle de ces lettres représentées phonétiquement n'appartient pas à l'alphabet espagnol ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question10" name="question10" ng-value="1" ng-disabled="disability">
+          <div id="question10answer1">La [béta]</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question10" name="question10" ng-value="2" ng-disabled="disability">
+          <div id="question10answer2">La [jota]</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question10" name="question10" ng-value="3" ng-disabled="disability">
+          <div id="question10answer3">La [égné]</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      La [jota] représente la lettre "J" la [égné] représente la lettre "Ñ"
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div ng-init="init()"></div>
+
+    <label ng-if="notanswered">
+      <button class="button button-block button-positive" type="submit">Valider</button>
+    </label>
+
+    <label>
+      <button class="button button-block button-positive" ng-click="goClass()">Voir le cours associé</button>
+    </label>
+  </div>
+</form>

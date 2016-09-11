@@ -1,0 +1,482 @@
+<div ng-if="answered" class="score-text text-center">
+  Votre score sur cet exercice est de
+</div>
+<div ng-if="answered" class="score text-center">
+  {{score}}/10
+</div>
+
+<hr/>
+<br/>
+
+<form ng-submit="validAnswer()">
+  <div>
+    <div class="list">
+      <div class=" item item-divider">
+        Question 1
+      </div>
+
+      <div class="question">À quoi sert la forme passive en anglais ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question1" name="question1" ng-value="1" ng-disabled="disability">
+          <div id="question1answer1">Elle permet de mettre une emphase sur
+            <br/>
+            l'action réalisée</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question1" name="question1" ng-value="2" ng-disabled="disability">
+          <div id="question1answer2">Elle permet d'exprimer un temps passé</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question1" name="question1" ng-value="3" ng-disabled="disability">
+          <div id="question1answer3">Elle est utilisé de manière à partager
+            <br/>
+            un sentiment</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      La forme passive permet de mettre plus d'importance sur l'action réalisée
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 2
+      </div>
+
+      <div class="question">Laquelle de ces propositions utilise ma forme passive ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question2" name="question2" ng-value="1" ng-disabled="disability">
+          <div id="question2answer1">The rent is paid once a month</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question2" name="question2" ng-value="2" ng-disabled="disability">
+          <div id="question2answer2">We pay the rent once a month</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question2" name="question2" ng-value="3" ng-disabled="disability">
+          <div id="question2answer3">John was eating an apple</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      La première proposition se concentre sur l'action, et non sur le sujet qui réalise l'action
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 3
+      </div>
+
+      <div class="question">Laquelle de ces propositions utilise correctement la forme passive ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question3" name="question3" ng-value="1" ng-disabled="disability">
+          <div id="question3answer1">I was born in 1985</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question3" name="question3" ng-value="2" ng-disabled="disability">
+          <div id="question3answer2">I am born in 1985</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question3" name="question3" ng-value="3" ng-disabled="disability">
+          <div id="question3answer3">I borned in 1985</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      C'est une exception, on ne dit pas "I am born in" mais "I was born in"
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 4
+      </div>
+
+      <div class="question">Quelle est la forme passive de verbe + "ing" ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question4" name="question4" ng-value="1" ng-disabled="disability">
+          <div id="question4answer1">to be + participe passé</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question4" name="question4" ng-value="2" ng-disabled="disability">
+          <div id="question4answer2">being + participe passé</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question4" name="question4" ng-value="3" ng-disabled="disability">
+          <div id="question4answer3">being + infinitif</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      La forme passive de verbe + "ing" est being + participe passé (ex : I like being kissed by my girlfriend)
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 5
+      </div>
+
+      <div class="question">Laquelle de ces propositions n'utilise pas une forme passive
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question5" name="question5" ng-value="1" ng-disabled="disability">
+          <div id="question5answer1">Nobody was hurt</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question5" name="question5" ng-value="2" ng-disabled="disability">
+          <div id="question5answer2">Nobody is hurt</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question5" name="question5" ng-value="3" ng-disabled="disability">
+          <div id="question5answer3">Nobody got hurt</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      Quand des choses surviennent ou changent, en particulier en anglais courant, on peut utiliser "get" au lieu de "be" au passif
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 6
+      </div>
+
+      <div class="question">Comment utilise-t-on la forme passive impersonnelle ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question6" name="question6" ng-value="1" ng-disabled="disability">
+          <div id="question6answer1">I am + participe passé + that</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question6" name="question6" ng-value="2" ng-disabled="disability">
+          <div id="question6answer2">It is + participe passé + that</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question6" name="question6" ng-value="3" ng-disabled="disability">
+          <div id="question6answer3">It is + verbe-ing + that</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      It is + participe passé + that permet de composer la forme passive impersonnelle (ex : It is said that men like videogames)
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 7
+      </div>
+
+      <div class="question">Laquelle de ces propositions utilise la voix passive ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question7" name="question7" ng-value="1" ng-disabled="disability">
+          <div id="question7answer1">He drove the car</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question7" name="question7" ng-value="2" ng-disabled="disability">
+          <div id="question7answer2">Tom was driving the car</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question7" name="question7" ng-value="3" ng-disabled="disability">
+          <div id="question7answer3">The car was driven by Tom</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      La troisième proposition est la seule utilisant la forme passive
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 8
+      </div>
+
+      <div class="question">Laquelle de ces propositions utilise la voix passive ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question8" name="question8" ng-value="1" ng-disabled="disability">
+          <div id="question8answer1">The car was on the road</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question8" name="question8" ng-value="2" ng-disabled="disability">
+          <div id="question8answer2">I drove Tom back home</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question8" name="question8" ng-value="3" ng-disabled="disability">
+          <div id="question8answer3">Tom was driven by me</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      La troisième proposition est la seule utilisant la forme passive
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 9
+      </div>
+
+      <div class="question">Laquelle de ces propositions utilise la voix passive ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question9" name="question9" ng-value="1" ng-disabled="disability">
+          <div id="question9answer1">I hate talkative peoples in quiet places</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question9" name="question9" ng-value="2" ng-disabled="disability">
+          <div id="question9answer2">He hates to listen to music</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question9" name="question9" ng-value="3" ng-disabled="disability">
+          <div id="question9answer3">I hate being talked to at the library</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      La troisième proposition est la seule utilisant la forme passive
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 10
+      </div>
+
+      <div class="question">Laquelle de ces propositions utilise la voix passive ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question10" name="question10" ng-value="1" ng-disabled="disability">
+          <div id="question10answer1">It is known that sun is hot</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question10" name="question10" ng-value="2" ng-disabled="disability">
+          <div id="question10answer2">It is a shame that you didn't come</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question10" name="question10" ng-value="3" ng-disabled="disability">
+          <div id="question10answer3">It is very hot today</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      La première proposition est la seule utilisant la forme passive
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 11
+      </div>
+
+      <div class="question">Comment doit s'utiliser un infinitif ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question11" name="question11" ng-value="1" ng-disabled="disability">
+          <div id="question11answer1">Avec ou sans "to"</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question11" name="question11" ng-value="2" ng-disabled="disability">
+          <div id="question11answer2">Toujours avec "to"</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question11" name="question11" ng-value="3" ng-disabled="disability">
+          <div id="question11answer3">Toujours sans "To"</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      Une forme infinitive peux s'utiliser avec ou sans "to"
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 12
+      </div>
+
+      <div class="question">Laquelle de ces proposition n'utilise pas de forme infinitive ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question12" name="question12" ng-value="1" ng-disabled="disability">
+          <div id="question12answer1">What does John eat on breakfast ?</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question12" name="question12" ng-value="2" ng-disabled="disability">
+          <div id="question12answer2">I want to go to Paris</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question12" name="question12" ng-value="3" ng-disabled="disability">
+          <div id="question12answer3">I must eat an apple everyday</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      La première proposition utilise une forme conjuguée du verbe "to eat"
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 13
+      </div>
+
+      <div class="question">Dans quelle condition utilise-t-on le verbe modal "must" ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question13" name="question13" ng-value="1" ng-disabled="disability">
+          <div id="question13answer1">Pour demander une permission</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question13" name="question13" ng-value="2" ng-disabled="disability">
+          <div id="question13answer2">Pour exprimer une obligation</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question13" name="question13" ng-value="3" ng-disabled="disability">
+          <div id="question13answer3">Pour exprimer une possibilité</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      "Must" permet d'exprimer une obligation
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div ng-init="init()"></div>
+
+    <label ng-if="notanswered">
+      <button class="button button-block button-positive" type="submit">Valider</button>
+    </label>
+
+    <label>
+      <button class="button button-block button-positive" ng-click="goClass()">Voir le cours associé</button>
+    </label>
+  </div>
+</form>

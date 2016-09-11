@@ -1,0 +1,182 @@
+@font-face {
+  font-family: 'robotoregular';
+  src: url('../font/Roboto-Regular-webfont.eot');
+  src: url('../font/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../font/Roboto-Regular-webfont.woff') format('woff'),
+  url('../font/Roboto-Regular-webfont.ttf') format('truetype'),
+  url('../font/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: robotoregular !important;
+  color: #152065;
+}
+
+h3 {
+  color: #152065;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#logo {
+  max-width: 100%;
+  padding: 70px 15px 10px 15px;
+}
+
+.problem-text {
+  padding-top: 17px;
+  height: 90px;
+  color: red;
+}
+
+ion-list a {
+  background: #9ee37d !important;
+}
+
+ion-list ion-item.active a {
+  background: #329c21 !important;
+  color: #fff !important;
+}
+
+i {
+  color: #303030 !important;
+}
+
+ion-list ion-item.active a i {
+  color: #fff !important;
+}
+
+ion-item {
+  font-weight: bold;
+}
+
+i {
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+
+.bar.bar-positive {
+  border-color: #152065;
+  background-color: #329c21;
+  color: #fff;
+}
+
+.big {
+  padding: 50px 0 50px 0;
+  font-size: 2em;
+}
+
+.text-button {
+  width: 220px;
+}
+
+.button.button-positive {
+  background-color: #329c21;
+  color: #fff;
+}
+
+.button.button-positive.active, .button.button-positive.activated {
+  border-color: #a2a2a2;
+  background-color: #246819;
+}
+
+.button.button-positive.button-clear {
+  color: #329c21;
+}
+
+.button.button-positive.button-outline {
+  border-color: #246819;
+  color: #329c21;
+}
+
+.button.button-positive.button-outline.active, .button.button-positive.button-outline.activated {
+  background-color: #329c21;
+}
+
+.footer {
+  padding-top: 90px;
+}
+
+.onezone-datepicker-button {
+  border-bottom: 1px solid #329c21;
+}
+
+.onezone-datepicker-button:after {
+  border-bottom: 6px solid #329c21;
+}
+
+.onezone-datepicker-navigation-arrow {
+  color: #329c21;
+}
+
+.onezone-datepicker-active-day,
+.onezone-datepicker-active-day:hover {
+  border: 2px solid #329c21;}
+
+.onezone-datepicker-selection-button {
+  color: #329c21;
+}
+
+.onezone-datepicker-modal-item.onezone-datepicker-modal-item-active {
+  background-color: #329c21;
+}
+
+.event {
+  margin: 20px 0 20px 0;
+}
+
+.event1 {
+  font-size: 1.3em;
+  padding: 0 7px 0 90px;
+  color: white;
+  background-color: #054a29;
+  border-radius: 0 15px 15px 0;
+}
+
+.event2 {
+  font-size: 1.3em;
+  padding: 0 7px 0 90px;
+  color: white;
+  background-color: #5bba6f;
+  border-radius: 0 15px 15px 0;
+}
+
+.exercice-text {
+  padding-top: 80px;
+}
+
+.score-text {
+  font-size: 1.2em;
+  padding: 15px 0 20px 0;
+}
+
+.score {
+  font-size: 2.3em;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.question {
+  font-size: 1.2em;
+  text-align: justify;
+  padding: 15px 0 15px 0;
+}
+
+.good-answer {
+  color: green;
+}
+
+.wrong-answer {
+  color: red;
+}
+
+.text-contact {
+  padding-top: 50px;
+  margin-bottom:70px;
+}
+
+.icon-contact {
+  color: #fff;
+}

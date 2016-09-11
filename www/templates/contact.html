@@ -1,5 +1,32 @@
 <ion-view view-title="Contact">
+  <ion-nav-bar class="bar-positive">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
   <ion-content>
-    <h1>page de contact</h1>
+    <div class="text-center text-contact">
+      Pour contacter votre mentor {{mentorName}}, choisissez l'une de ces options :
+    </div>
+
+    <div class="text-center">
+      <button class="button button-positive text-button" ng-click="sendEmail()">
+        <i class="icon-contact icon ion-android-mail" ></i>
+        Contacter par mail
+      </button>
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="text-center">
+      <button class="button button-positive text-button" ng-click="sendSms()">
+        <i class="icon-contact icon ion-android-phone-portrait" ></i>
+        Contacter par SMS
+      </button>
+    </div>
+
   </ion-content>
 </ion-view>

@@ -1,30 +1,27 @@
-<ion-view view-title="Cours">
+<ion-view view-title="Cours du jour">
+  <ion-nav-bar class="bar-positive">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
   <ion-content>
     <div>
-      <button class="button button-block button-positive">Cours audio</button>
+      <button class="button button-block button-positive" ng-click="audioClass()">Cours audio</button>
     </div>
 
-    <p class="text-center">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus turpis, placerat vitae viverra varius,
-      pellentesque sit amet tellus. Donec laoreet eros sit amet nunc ullamcorper, rhoncus aliquet enim facilisis.
-      Quisque eget orci mauris. In vehicula nisl eu purus placerat, vitae iaculis sapien dignissim. Morbi pulvinar
-      mi eu arcu vestibulum, vitae iaculis ligula blandit. Quisque venenatis ac enim eget aliquam. In ut euismod velit.
-      In tincidunt risus eget velit rutrum consequat id et dolor. Pellentesque consequat efficitur elit, id suscipit lacus
-      ultrices vel.
-    </p>
-    <p class="text-center">
-      Donec in ullamcorper risus, in imperdiet ex. Morbi sodales, mauris nec blandit convallis, diam sem ullamcorper
-      metus, eget commodo ligula tortor sed neque. Pellentesque commodo risus felis, a feugiat nulla ornare eget. In
-      in lorem sapien. Sed ullamcorper arcu neque, ut suscipit felis semper sed. Aenean sagittis interdum sapien, sed
-      ultrices lorem facilisis nec. Mauris venenatis, arcu vel aliquet accumsan, lectus sapien porttitor justo, id
-      finibus magna ex in risus. Morbi condimentum, odio sit amet cursus pharetra, eros est porta dolor, eu maximus
-      ex purus sit amet erat. Proin lorem lectus, semper quis metus quis, dictum gravida sapien. Nunc ornare id augue
-      non feugiat. Proin aliquet tempor rhoncus.
-    </p>
-    <p class="text-center">
-      In dictum eros quis condimentum sodales. Phasellus tristique velit ex, vitae efficitur tellus pretium sed.
-      Curabitur sodales porttitor luctus. Mauris velit purus, ullamcorper tempus sodales ac, cursus ac metus. Nunc
-      eget arcu felis. Cras scelerisque risus et neque bibendum ullamcorper. Nunc odio magna, facilisis eu velit a,
-      auctor bibendum massa. Nam vitae nisi in turpis pellentesque faucibus ut sed ante. In hac habitasse platea dictumst.
-    </p>
+    <div ng-if="player" class="text-center">
+      <button class="button button-positive" ng-click="play()">Lecture</button>
+      <button class="button button-positive" ng-click="stop()">Stop</button>
+    </div>
+
+    <br/>
+
+    <div ng-include="'templates/cours/' + contenu + '.html'"></div>
+
+    <div class="text-center">
+      <button class="button button-positive" ng-click="goExercice()">Exercice correspondant</button>
+    </div>
+  </ion-content>
 </ion-view>

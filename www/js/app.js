@@ -4,7 +4,14 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('multilingua', ['ionic', 'firebase', 'multilingua.controllers', 'multilingua.services'])
+angular.module('multilingua', [
+  'ionic',
+  'firebase',
+  'multilingua.controllers',
+  'multilingua.services',
+  'ngCordova',
+  'onezone-datepicker'
+])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -26,12 +33,14 @@ angular.module('multilingua', ['ionic', 'firebase', 'multilingua.controllers', '
   $stateProvider
 
     .state('loading', {
+      cache: false,
       url: '/loading',
       templateUrl: 'templates/loading.html',
       controller: 'LoadingCtrl'
     })
 
     .state('login', {
+      cache: false,
       url: '/login',
       templateUrl: 'templates/login.html',
       controller: 'LoginCtrl'
@@ -63,15 +72,18 @@ angular.module('multilingua', ['ionic', 'firebase', 'multilingua.controllers', '
     })
 
     .state('app.dailyclass', {
-      url: '/dailyclass',
+      cache: false,
+      url: '/dailyclass/:class_id',
       views: {
         'menuContent': {
-          templateUrl: 'templates/cours/dailyclass.html'
+          templateUrl: 'templates/cours/dailyclass.html',
+          controller: 'DailyClassCtrl'
         }
       }
     })
 
     .state('app.listclass', {
+      cache: false,
       url: '/listclass',
       views: {
         'menuContent': {
@@ -81,17 +93,41 @@ angular.module('multilingua', ['ionic', 'firebase', 'multilingua.controllers', '
       }
     })
 
-
     .state('app.exercice', {
+      cache: false,
         url: '/exercice',
         views: {
           'menuContent': {
-            templateUrl: 'templates/exercice.html'
+            templateUrl: 'templates/exercice4.html',
+            controller: 'ExerciceCtrl'
           }
         }
       })
 
+    .state('app.dailyexercice', {
+      cache: false,
+      url: '/dailyexercice/:exercice_id',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/exercices/dailyexercice.html',
+          controller: 'DailyExerciceCtrl'
+        }
+      }
+    })
+
+    .state('app.listexercice', {
+      cache: false,
+      url: '/listexercice',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/exercices/listexercice.html',
+          controller: 'ListExerciceCtrl'
+        }
+      }
+    })
+
     .state('app.agenda', {
+      cache: false,
       url: '/agenda',
       views: {
         'menuContent': {
@@ -102,20 +138,12 @@ angular.module('multilingua', ['ionic', 'firebase', 'multilingua.controllers', '
     })
 
     .state('app.contact', {
+      cache: false,
       url: '/contact',
       views: {
         'menuContent': {
-          templateUrl: 'templates/contact.html'
-        }
-      }
-    })
-
-    .state('app.single', {
-      url: '/playlists/:playlistId',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlist.html',
-          controller: 'PlaylistCtrl'
+          templateUrl: 'templates/contact.html',
+          controller: 'ContactCtrl'
         }
       }
     });

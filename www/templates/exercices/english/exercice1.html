@@ -1,0 +1,373 @@
+<div ng-if="answered" class="score-text text-center">
+  Votre score sur cet exercice est de
+</div>
+<div ng-if="answered" class="score text-center">
+  {{score}}/10
+</div>
+
+<hr/>
+<br/>
+
+<form ng-submit="validAnswer()">
+  <div>
+    <div class="list">
+      <div class=" item item-divider">
+        Question 1
+      </div>
+
+      <div class="question">Lequel de ces verbes n'est pas un verbe modal ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question1" name="question1" ng-value="1" ng-disabled="disability">
+          <div id="question1answer1">Eat</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question1" name="question1" ng-value="2" ng-disabled="disability">
+          <div id="question1answer2">Would</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question1" name="question1" ng-value="3" ng-disabled="disability">
+          <div id="question1answer3">Can</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      Eat n'est pas un verbe auxiliaire, il exprime une action
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 2
+      </div>
+
+      <div class="question">Laquelle de ces propositions est correctement conjuguée ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question2" name="question2" ng-value="1" ng-disabled="disability">
+          <div id="question2answer1">He musts go to school</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question2" name="question2" ng-value="2" ng-disabled="disability">
+          <div id="question2answer2">He must go to school</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question2" name="question2" ng-value="3" ng-disabled="disability">
+          <div id="question2answer3">He go to school</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      Un verbe modal ne prend pas de "s" à la 3ème personne, contrairement aux autres verbes usuels
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 3
+      </div>
+
+      <div class="question">Quelle proposition n'utilise pas correctement la forme négative ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question3" name="question3" ng-value="1" ng-disabled="disability">
+          <div id="question3answer1">They won't see a movie</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question3" name="question3" ng-value="2" ng-disabled="disability">
+          <div id="question3answer2">They will not see a movie</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question3" name="question3" ng-value="3" ng-disabled="disability">
+          <div id="question3answer3">They don't will see a movie</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      L'article négatif "not" ou son abréviation doit toujours être utilisé avec le verbe modal pour exprimer une négation
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 4
+      </div>
+
+      <div class="question">Les verbes modaux ne peuvent pas être utilisés aux temps passés ou futurs
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question4" name="question4" ng-value="1" ng-disabled="disability">
+          <div id="question4answer1">Cela dépend du verbe</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question4" name="question4" ng-value="2" ng-disabled="disability">
+          <div id="question4answer2">Vrai</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question4" name="question4" ng-value="3" ng-disabled="disability">
+          <div id="question4answer3">Faux</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      La plupart des verbes modaux ne peuvent pas être utilisés aux temps passés ou futurs, mais certains le peuvent
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 5
+      </div>
+
+      <div class="question">Laquelle de ces formes proposées est correcte ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question5" name="question5" ng-value="1" ng-disabled="disability">
+          <div id="question5answer1">She can have come here</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question5" name="question5" ng-value="2" ng-disabled="disability">
+          <div id="question5answer2">She could have come here</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question5" name="question5" ng-value="3" ng-disabled="disability">
+          <div id="question5answer3">She will can come here</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      "Could" est la forme passée de "can", on peut donc l'utiliser pour exprimer un temps passé
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 6
+      </div>
+
+      <div class="question">Laquelle de ces proposition utilise correctement la forme négative d'un verbe modal
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question6" name="question6" ng-value="1" ng-disabled="disability">
+          <div id="question6answer1">You can go to the airport ?</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question6" name="question6" ng-value="2" ng-disabled="disability">
+          <div id="question6answer2">You must finish tonight ?</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question6" name="question6" ng-value="3" ng-disabled="disability">
+          <div id="question6answer3">Will you eat the cake ?</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      Pour poser une question avec le verbe modal, il faut l'inverser avec le verbe principal
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 7
+      </div>
+
+      <div class="question">Dans quelle condition utilise-t-on le verbe modal "can" ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question7" name="question7" ng-value="1" ng-disabled="disability">
+          <div id="question7answer1">Pour demander une permission</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question7" name="question7" ng-value="2" ng-disabled="disability">
+          <div id="question7answer2">Pour exprimer une possibilité</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question7" name="question7" ng-value="3" ng-disabled="disability">
+          <div id="question7answer3">Pour exprimer une obligation</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      "Can" permet de demander une permission
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 8
+      </div>
+
+      <div class="question">Dans quelle condition utilise-t-on le verbe modal "may" ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question8" name="question8" ng-value="1" ng-disabled="disability">
+          <div id="question8answer1">Pour demander une permission</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question8" name="question8" ng-value="2" ng-disabled="disability">
+          <div id="question8answer2">Pour exprimer une possibilité</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question8" name="question8" ng-value="3" ng-disabled="disability">
+          <div id="question8answer3">Pour exprimer une obligation</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      "May" permet d'exprimer une possibilité
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 9
+      </div>
+
+      <div class="question">Dans quelle condition utilise-t-on le verbe modal "must" ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question9" name="question9" ng-value="1" ng-disabled="disability">
+          <div id="question9answer1">Pour demander une permission</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question9" name="question9" ng-value="2" ng-disabled="disability">
+          <div id="question9answer2">Pour exprimer une possibilité</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question9" name="question9" ng-value="3" ng-disabled="disability">
+          <div id="question9answer3">Pour exprimer une obligation</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      "Must" permet d'exprimer une obligation
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 10
+      </div>
+
+      <div class="question">Que permet de faire un verbe modal en général ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question10" name="question10" ng-value="1" ng-disabled="disability">
+          <div id="question10answer1">Exprimer un point de vue</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question10" name="question10" ng-value="2" ng-disabled="disability">
+          <div id="question10answer2">Exprimer une sensation</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question10" name="question10" ng-value="3" ng-disabled="disability">
+          <div id="question10answer3">Exprimer une action</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      Le verbe modal permet d'exprimer son point de vue au travers de permission, de possibilités,...
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div ng-init="init()"></div>
+
+    <label ng-if="notanswered">
+      <button class="button button-block button-positive" type="submit">Valider</button>
+    </label>
+
+    <label>
+      <button class="button button-block button-positive" ng-click="goClass()">Voir le cours associé</button>
+    </label>
+  </div>
+</form>

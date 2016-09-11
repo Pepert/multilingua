@@ -1,0 +1,494 @@
+<div ng-if="answered" class="score-text text-center">
+  Votre score sur cet exercice est de
+</div>
+<div ng-if="answered" class="score text-center">
+  {{score}}/10
+</div>
+
+<hr/>
+<br/>
+
+<form ng-submit="validAnswer()">
+  <div>
+    <div class="list">
+      <div class=" item item-divider">
+        Question 1
+      </div>
+
+      <div class="question">Qu'est-ce qu'un adverbe ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question1" name="question1" ng-value="1" ng-disabled="disability">
+          <div id="question1answer1">C'est un mot permettant de préciser
+            <br/>
+            le sujet de l'action</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question1" name="question1" ng-value="2" ng-disabled="disability">
+          <div id="question1answer2">C'est un mot utilisé pour marquer
+            <br/>
+            une forme grammaticale précise</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question1" name="question1" ng-value="3" ng-disabled="disability">
+          <div id="question1answer3">C'est une information permettant de
+            <br/>
+            préciser le contexte d'une action</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      Un adverbe est un mot permettant de préciser le sujet de l'action, d'ajouter des informations au contexte
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 2
+      </div>
+
+      <div class="question">Lequel de ces adverbes n'est pas un adverbe de fréquence ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question2" name="question2" ng-value="1" ng-disabled="disability">
+          <div id="question2answer1">Usually</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question2" name="question2" ng-value="2" ng-disabled="disability">
+          <div id="question2answer2">Here</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question2" name="question2" ng-value="3" ng-disabled="disability">
+          <div id="question2answer3">Often</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      Un adverbe de fréquence décris la fréquence à laquelle quelque chose se passe
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 3
+      </div>
+
+      <div class="question">Laquelle de ces propositions n'utilise pas de préposition ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question3" name="question3" ng-value="1" ng-disabled="disability">
+          <div id="question3answer1">I eat whenever I want</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question3" name="question3" ng-value="2" ng-disabled="disability">
+          <div id="question3answer2">He travels around the world</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question3" name="question3" ng-value="3" ng-disabled="disability">
+          <div id="question3answer3">They are inside the house</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      Une préposition sert à décrire la relation entre un nom et un pronom
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 4
+      </div>
+
+      <div class="question">Laquelle de ces propositions est un pronom ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question4" name="question4" ng-value="1" ng-disabled="disability">
+          <div id="question4answer1">You</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question4" name="question4" ng-value="2" ng-disabled="disability">
+          <div id="question4answer2">He</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question4" name="question4" ng-value="3" ng-disabled="disability">
+          <div id="question4answer3">Him</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      Un pronom est utilisé pour remplacer un nom
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 5
+      </div>
+
+      <div class="question">Pourquoi utilise-t-on les verbes auxiliaires ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question5" name="question5" ng-value="1" ng-disabled="disability">
+          <div id="question5answer1">Pour exprimer une appartenance</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question5" name="question5" ng-value="2" ng-disabled="disability">
+          <div id="question5answer2">Pour former les temps et les
+            <br/>
+            formes passives</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question5" name="question5" ng-value="3" ng-disabled="disability">
+          <div id="question5answer3">Pour définir plus d'informations
+            <br/>
+            sur l'action</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      Les verbes auxiliaires sont utilisés pour former les temps et les formes passives
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 6
+      </div>
+
+      <div class="question">Laquelle de ces propositions n'est pas un verbe auxiliare ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question6" name="question6" ng-value="1" ng-disabled="disability">
+          <div id="question6answer1">Want</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question6" name="question6" ng-value="2" ng-disabled="disability">
+          <div id="question6answer2">Have</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question6" name="question6" ng-value="3" ng-disabled="disability">
+          <div id="question6answer3">Be</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      "Want" n'est pas un verbe auxiliaire, il exprime une action
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 7
+      </div>
+
+      <div class="question">À quoi sert un gérondif ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question7" name="question7" ng-value="1" ng-disabled="disability">
+          <div id="question7answer1">Il permet de définir un temps
+            <br/>
+            passé</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question7" name="question7" ng-value="2" ng-disabled="disability">
+          <div id="question7answer2">Il permet d'associer un nom
+            <br/>
+            à un verbe modal</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question7" name="question7" ng-value="3" ng-disabled="disability">
+          <div id="question7answer3">Il permet d'utiliser un verbe
+            <br/>
+            comme un nom</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      En rajoutant "-ing" à la fin d'un verbe, celui ci devient alors gérondif, ce qui lui permet d'être utilisé comme un nom
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 8
+      </div>
+
+      <div class="question">Comment doit s'utiliser un infinitif ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question8" name="question8" ng-value="1" ng-disabled="disability">
+          <div id="question8answer1">Toujours avec "to"</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question8" name="question8" ng-value="2" ng-disabled="disability">
+          <div id="question8answer2">Avec ou sans "to"</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question8" name="question8" ng-value="3" ng-disabled="disability">
+          <div id="question8answer3">Toujours sans "To"</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      Une forme infinitive peux s'utiliser avec ou sans "to"
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 9
+      </div>
+
+      <div class="question">Laquelle de ces proposition n'utilise pas de forme infinitive ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question9" name="question9" ng-value="1" ng-disabled="disability">
+          <div id="question9answer1">What does John eat on breakfast ?</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question9" name="question9" ng-value="2" ng-disabled="disability">
+          <div id="question9answer2">I want to go to Paris</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question9" name="question9" ng-value="3" ng-disabled="disability">
+          <div id="question9answer3">I must eat an apple everyday</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      La première proposition utilise une forme conjuguée du verbe "to eat"
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 10
+      </div>
+
+      <div class="question">Laquelle de ces proposition utilise un verbe à particule ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question10" name="question10" ng-value="1" ng-disabled="disability">
+          <div id="question10answer1">You can ask to your mum</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question10" name="question10" ng-value="2" ng-disabled="disability">
+          <div id="question10answer2">I'm eating after you</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question10" name="question10" ng-value="3" ng-disabled="disability">
+          <div id="question10answer3">I will take off at 7am</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      Le verbe "to take off" est un verbe à particule, il a une signification complètement différente que "to take"
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 11
+      </div>
+
+      <div class="question">Dans quelle condition utilise-t-on le verbe modal "can" ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question11" name="question11" ng-value="1" ng-disabled="disability">
+          <div id="question11answer1">Pour exprimer une possibilité</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question11" name="question11" ng-value="2" ng-disabled="disability">
+          <div id="question11answer2">Pour demander une permission</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question11" name="question11" ng-value="3" ng-disabled="disability">
+          <div id="question11answer3">Pour exprimer une obligation</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      "Can" permet de demander une permission
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 12
+      </div>
+
+      <div class="question">Dans quelle condition utilise-t-on le verbe modal "may" ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question12" name="question12" ng-value="1" ng-disabled="disability">
+          <div id="question12answer1">Pour exprimer une possibilité</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question12" name="question12" ng-value="2" ng-disabled="disability">
+          <div id="question12answer2">Pour demander une permission</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question12" name="question12" ng-value="3" ng-disabled="disability">
+          <div id="question12answer3">Pour exprimer une obligation</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      "May" permet d'exprimer une possibilité
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="list">
+      <div class=" item item-divider">
+        Question 13
+      </div>
+
+      <div class="question">Dans quelle condition utilise-t-on le verbe modal "must" ?
+      </div>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question13" name="question13" ng-value="1" ng-disabled="disability">
+          <div id="question13answer1">Pour demander une permission</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question13" name="question13" ng-value="2" ng-disabled="disability">
+          <div id="question13answer2">Pour exprimer une possibilité</div>
+        </ion-radio>
+      </label>
+
+      <label class="item item-radio">
+        <ion-radio ng-model="question.question13" name="question13" ng-value="3" ng-disabled="disability">
+          <div id="question13answer3">Pour exprimer une obligation</div>
+        </ion-radio>
+      </label>
+    </div>
+
+    <div ng-if="answered">
+      "Must" permet d'exprimer une obligation
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div ng-init="init()"></div>
+
+    <label ng-if="notanswered">
+      <button class="button button-block button-positive" type="submit">Valider</button>
+    </label>
+
+    <label>
+      <button class="button button-block button-positive" ng-click="goClass()">Voir le cours associé</button>
+    </label>
+  </div>
+</form>

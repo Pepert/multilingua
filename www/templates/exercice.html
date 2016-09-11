@@ -1,5 +1,26 @@
-<ion-view view-title="Browse">
+<ion-view view-title="Exercices">
+  <ion-nav-bar class="bar-positive">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
   <ion-content>
-    <h1>Browse</h1>
+
+    <div class="exercice-text">
+      <div class="text-center">
+        <p class="text-center">L'exercice d'aujourd'hui est disponible !</p>
+        <button class="button button-positive text-button" ng-click="dailyExercice()">Exercice du jour</button>
+      </div>
+
+      <br/>
+      <br/>
+
+      <div class="text-center">
+        <p class="text-center">Plusieurs exercices ont été débloqués</p>
+        <button class="button button-positive text-button" ng-click="listExercices()">Exercices accessibles</button>
+      </div>
+    </div>
+
   </ion-content>
 </ion-view>

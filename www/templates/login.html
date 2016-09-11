@@ -1,6 +1,12 @@
 <ion-view>
   <ion-content>
+    <image id="logo" src="img/multilingua.png" alt="Multilingua"/>
+
     <form ng-submit="login()">
+      <div class="text-center problem-text">
+        {{problem}}
+      </div>
+
       <div class="list">
         <label class="item item-input {{emailInputColor}}">
           <span class="input-label">Email</span>
@@ -10,12 +16,11 @@
           <span class="input-label">Mot de passe</span>
           <input type="password" ng-model="loginData.password">
         </label>
-        <div class="text-center">
-          {{problem}}
-        </div>
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
-        </label>
+
+        <br/>
+
+        <button class="button button-block button-positive" type="submit">Log in</button>
+
       </div>
     </form>
   </ion-content>
